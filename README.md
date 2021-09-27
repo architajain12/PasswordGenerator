@@ -6,7 +6,7 @@ For installing all dependencies run `npm install`
 
 To display help for commands run `pswdgen --help`
 
-Run file running `pswdgen (options)`
+Run file using `pswdgen (options)`
 
 Sample output using differnt options and commands - 
 
