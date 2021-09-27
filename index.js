@@ -1,4 +1,5 @@
 const program = require('commander')
+const clipboardy = require('clipboardy')
 const chalk = require('chalk')
 const createPassword = require('./utils/createPassword')
 
@@ -14,4 +15,9 @@ program
 const { length, save, nums, symbols } = program.opts()
 
 const generatedPswd = createPassword(length, nums, symbols)
+
+//copying the generated password to clipboard
+clipboardy.writeSync(generatedPswd)
+
 console.log(chalk.cyan('Generated Password: ') + chalk.bold(generatedPswd))
+console.log(chalk.green('Password copied to clipboard!'))
